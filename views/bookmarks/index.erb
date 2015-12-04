@@ -1,0 +1,10 @@
+<a href="bookmarks/new">New bookmark</a>
+
+<ul>
+  <% @bookmarks.each do |bookmark| %>
+    <%= bookmark.url %>
+    <%= bookmark.genre %>
+    <%= bookmark.name %>
+    <%= bookmark.details %>
+  <% end %>
+</ul>
