@@ -51,6 +51,10 @@ class DBBase
     self.new(result) if result
   end
 
+  def self.find_by(input, type)
+    results = run_sql("SELECT #{table_name}.* FROM #{table_name} WHERE #{type} = #{sql_sanitize(input, :string)}")
+  end
+
   def self.sql_sanitize(value, type)
     case type
       when :string

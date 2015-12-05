@@ -1,4 +1,5 @@
 get '/bookmarks' do
+  @genre = params[:genre]
   @bookmarks = Bookmark.all
   erb :'bookmarks/index'
 end
@@ -13,6 +14,13 @@ post '/bookmarks' do
   @bookmark.save
   redirect to('/bookmarks')
 end
+
+get '/bookmarks/' do
+  @genre = params[:genre]
+  @bookmarks = Bookmark.find_by(@genre, 'genre').map { |bookmark| Bookmark.new(bookmark) if bookmark }
+  erb :'bookmarks/show'
+end
+
 
 get '/bookmarks/:id/edit' do
   @bookmark = Bookmark.find(params[:id])

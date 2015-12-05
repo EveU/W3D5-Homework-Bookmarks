@@ -1,0 +1,14 @@
+<% if @bookmarks %>
+<ul>
+  <% @bookmarks.each do |bookmark| %>
+    <p>URL: <%= bookmark.url %></p>
+    <p>Genre: <%= bookmark.genre %></p>
+    <p>Name: <%= bookmark.name %></p>
+    <p>Details: <%= bookmark.details %></p>
+    <hr/>
+  <% end %>
+</ul>
+
+<%else%>
+  <p>No results match that genre.</p>
+<%end%>

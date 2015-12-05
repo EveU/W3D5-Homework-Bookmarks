@@ -14,11 +14,18 @@
     <li><a href="/">Home</a></li>
     <li><a href="/bookmarks">Bookmarks</a></li>
   </ul>
+  
+  <div id='search'>
+    <form action='/bookmarks/' method='get'>
+      <label>Search by genre<input type='text' name='genre' autofocus></label>
+      <button>Search!</button>
+    </form>
+  </div>
 
   <%= yield %>
   
   <footer>
-    <p>&copy Evelyn Utterson 2015</p>
+    <p>&copy Clanmarkr 2015</p>
   </footer>
 </body>
 </html>
