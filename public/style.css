@@ -1,0 +1,122 @@
+body { 
+  min-width: 500px;
+  background: #95ccc2 center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #043a30;
+  text-align: center;
+}
+
+/*links*/
+a {
+  text-decoration: none;
+  color: #043a30;
+}
+
+a:hover {
+  color: white;
+}
+
+/*banner inc nav and search*/
+#banner {
+  height: 260px;
+  max-width: 100%;
+  background: url(http://a.dilcdn.com/bl/wp-content/uploads/sites/8/2012/02/animal-friends-bookmarks.jpg) no-repeat center;
+  background-size: 500px 260px;
+  padding: 1px;
+}
+
+ul {
+  padding: 0;
+}
+
+nav li {
+  padding: 15px;
+  display: inline;
+}
+
+#banner a {
+  background-color: #043a30;
+  color: white;
+  position: relative;
+  left: 10px;
+  padding: 5px;
+  border: 1px solid white;
+  border-radius: 20px;
+}
+
+#banner a:hover {
+  background-color: #95ccc2;
+}
+
+#banner form {
+  position: relative;
+  top: 100px;
+}
+
+#banner a.buttons {
+  position: relative;
+  top: 145px;
+}
+
+/*display bookmarks*/
+dd {
+  margin: auto;
+}
+
+dd input, textarea {
+  max-width: 500px;
+  width: 75%;
+}
+
+form select {
+  font-size: 16px;
+}
+
+form input {
+  font-size: 14px;
+}
+
+button .search {
+  background-image: url(https://cdn4.iconfinder.com/data/icons/round-buttons/512/black_search.png);
+  border-radius: 50%;
+}
+
+.buttons, .buttons:hover {
+  display: inline;
+  background-color: #043a30;
+  color: #95ccc2;
+  font-size: 13px;
+}
+
+.buttons input {
+  border: none;
+  background: none;
+  background-color: #043a30;
+  font-family: times;
+  color: #95ccc2;
+}
+
+a.buttons {
+  padding: 3.5px 6px;
+  margin: 0 3px 0 3px;
+}
+
+.bookmarks li {
+  list-style-type: none;
+  position: relative;
+  float: left;
+  width: 42.5%;
+  margin: 1%;
+  border: double;
+  padding: 1.5%;
+}
+
+/*footer*/
+footer {
+  position: static;
+  bottom: 5px;
+  clear: both;
+}

@@ -1,15 +1,14 @@
-<a href="bookmarks/new">New bookmark</a>
-
-<ul>
+<ul class='bookmarks'>
   <% @bookmarks.each do |bookmark| %>
-    <p>URL: <%= bookmark.url %></p>
-    <p>Genre: <%= bookmark.genre %></p>
-    <p>Name: <%= bookmark.name %></p>
-    <p>Details: <%= bookmark.details %></p>
-    <a href="bookmarks/<%=bookmark.id%>/edit">Edit</a>
-    <form action='/bookmarks/<%=bookmark.id%>/delete' method='post'>
-      <input type='submit' value='Delete'>
-    </form>
-    <hr/>
+    <li>
+      <p><strong>URL: </strong><a href="http://<%=bookmark.url%>"><%= bookmark.url %></a></p>
+      <p><strong>Genre: </strong><%= bookmark.genre %></p>
+      <p><strong>Name: </strong><%= bookmark.name %></p>
+      <p><strong>Details: </strong><%= bookmark.details %></p>
+      <a class='buttons' href="bookmarks/<%=bookmark.id%>/edit">Edit</a>
+      <form class='buttons' action='/bookmarks/<%=bookmark.id%>/delete' method='post'>
+        <input type='submit' value='Delete'>
+      </form>
+    </li>
   <% end %>
 </ul>

@@ -2,28 +2,38 @@
 <html>
 <head>
   <meta charset='utf-8'/>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="../../style.css">
   <title>Clanmarkr</title>
 </head>
 <body>
   <header>
-    <h1>Clanmarkr</h1>  
+    <h1><a href="/">Clanmarkr</a></h1>  
   </header>
 
-  <ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="/bookmarks">Bookmarks</a></li>
-  </ul>
-  
-  <div id='search'>
-    <form action='/bookmarks/' method='get'>
-      <label>Search by genre<input type='text' name='genre' autofocus></label>
-      <button>Search!</button>
-    </form>
+  <div id='banner'>
+    <div>
+      <nav>  
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/bookmarks">View Bookmarks</a></li>
+        </ul>
+      </nav>
+
+      <form action='/bookmarks/' method='get'>
+        <select name="type">
+          <option value="genre">Search by genre</option>
+        </select>
+        <input type='text' name='genre' placeholder="Find bookmarks..." autofocus>
+        <button>Search</button>
+      </form>
+
+      <a class='buttons' href="../../bookmarks/new">Create new bookmark</a>
+
+    </div>
   </div>
 
   <%= yield %>
-  
+
   <footer>
     <p>&copy Clanmarkr 2015</p>
   </footer>

@@ -21,10 +21,9 @@ get '/bookmarks/' do
   erb :'bookmarks/show'
 end
 
-
 get '/bookmarks/:id/edit' do
   @bookmark = Bookmark.find(params[:id])
-  erb :'/bookmarks/edit'
+  erb :'bookmarks/edit'
 end
 
 post '/bookmarks/:id' do
